@@ -5,6 +5,21 @@ Class {
 }
 
 { #category : #playing }
+Paper >> playAgainst: aFigure [ 
+	^aFigure playAgainstPaper: self
+]
+
+{ #category : #'as yet unclassified' }
+Paper >> playAgainstPaper: aFigure [
+	^'draw'
+]
+
+{ #category : #'as yet unclassified' }
+Paper >> playAgainstRock: aFigure [
+	^self
+]
+
+{ #category : #playing }
 Paper >> vs: aTool [ 
 	^ aTool vsPaper
 ]

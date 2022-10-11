@@ -5,6 +5,12 @@ Class {
 }
 
 { #category : #tests }
+PaperTest >> testVsLizard [
+	
+	self assert: (Paper new vs: (Lizard new)) equals: 'lizard'
+]
+
+{ #category : #tests }
 PaperTest >> testVsPaper [
 	
 	self assert: (Paper new vs: (Paper new)) equals: 'draw'
@@ -20,4 +26,10 @@ PaperTest >> testVsRock [
 PaperTest >> testVsScissors [
 	
 	self assert: (Paper new vs: (Scissors new)) equals: 'scissors'
+]
+
+{ #category : #tests }
+PaperTest >> testVsSpock [
+	
+	self assert: (Paper new vs: (Spock new)) equals: 'paper'
 ]

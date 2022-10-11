@@ -15,8 +15,18 @@ Lizard >> vsLizard [
 ]
 
 { #category : #getting }
+Lizard >> vsPaper [
+	^ 'lizard'
+]
+
+{ #category : #getting }
 Lizard >> vsRock [
 	^ 'rock'
+]
+
+{ #category : #playing }
+Lizard >> vsScissors [
+	^ 'scissors'
 ]
 
 { #category : #getting }

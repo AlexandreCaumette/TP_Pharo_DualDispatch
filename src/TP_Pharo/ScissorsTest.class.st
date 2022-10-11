@@ -5,6 +5,12 @@ Class {
 }
 
 { #category : #tests }
+ScissorsTest >> testVsLizard [
+			
+	self assert: (Scissors new vs: (Lizard new)) equals: 'scissors'
+]
+
+{ #category : #tests }
 ScissorsTest >> testVsPaper [ 
 			
 	self assert: (Scissors new vs: (Paper new)) equals: 'scissors'
@@ -24,4 +30,10 @@ ScissorsTest >> testVsScissors [
 	"scope: class-variables  &  instance-variables"	
 			
 	self assert: (Scissors new vs: (Scissors new)) equals: 'draw'
+]
+
+{ #category : #tests }
+ScissorsTest >> testVsSpock [
+			
+	self assert: (Scissors new vs: (Spock new)) equals: 'spock'
 ]

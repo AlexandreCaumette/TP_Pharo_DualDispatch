@@ -5,6 +5,21 @@ Class {
 }
 
 { #category : #playing }
+Rock >> playAgainst: aFigure [ 
+	^aFigure playAgainstRock: self
+]
+
+{ #category : #playing }
+Rock >> playAgainstPaper: aFigure [
+	^ aFigure
+]
+
+{ #category : #playing }
+Rock >> playAgainstRock: aFigure [
+	^ 'draw'
+]
+
+{ #category : #playing }
 Rock >> vs: aTool [ 
 	^ aTool vsRock
 ]

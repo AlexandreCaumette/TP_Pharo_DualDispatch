@@ -5,6 +5,26 @@ Class {
 }
 
 { #category : #tests }
+GameTest >> testPaperVSPaper [
+			
+	| game |
+	
+	game := Game new.
+	
+	self assert: (game play: (Paper new) against: (Paper new)) equals: 'draw'
+]
+
+{ #category : #tests }
+GameTest >> testPaperVSRock [
+			
+	| game |
+	
+	game := Game new.
+	
+	self assert: (game play: (Paper new) against: (Rock new)) equals: 'paper'
+]
+
+{ #category : #tests }
 GameTest >> testPaperVsPaper [
 
 	self assert: (Game new play: (Paper new) against: (Paper new)) equals: 'draw'
@@ -20,6 +40,36 @@ GameTest >> testPaperVsRock [
 GameTest >> testPaperVsScissors [
 
 	self assert: (Game new play: (Paper new) against: (Scissors new)) equals: 'scissors'
+]
+
+{ #category : #tests }
+GameTest >> testRockVSPaper [
+			
+	| game |
+	
+	game := Game new.
+	
+	self assert: (game play: (Rock new) against: (Paper new)) equals: 'paper'
+]
+
+{ #category : #tests }
+GameTest >> testRockVSRock [
+			
+	| game |
+	
+	game := Game new.
+	
+	self assert: (game play: (Rock new) against: (Rock new)) equals: 'draw'
+]
+
+{ #category : #tests }
+GameTest >> testRockVSScissors [
+			
+	| game |
+	
+	game := Game new.
+	
+	self assert: (game play: (Rock new) against: (Scissors new)) equals: 'rock'
 ]
 
 { #category : #tests }
@@ -42,8 +92,12 @@ GameTest >> testRockVsScissors [
 
 { #category : #tests }
 GameTest >> testScissorsVsPaper [
-
-	self assert: (Game new play: (Scissors new) against: (Paper new)) equals: 'scissors'
+			
+	| game |
+	
+	game := Game new.
+	
+	self assert: (game play: (Scissors new) against: (Paper new)) equals: 'scissors'
 ]
 
 { #category : #tests }
@@ -54,6 +108,10 @@ GameTest >> testScissorsVsRock [
 
 { #category : #tests }
 GameTest >> testScissorsVsScissors [
-
-	self assert: (Game new play: (Scissors new) against: (Scissors new)) equals: 'draw'
+			
+	| game |
+	
+	game := Game new.
+	
+	self assert: (game play: (Scissors new) against: (Scissors new)) equals: 'draw'
 ]
